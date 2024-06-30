@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Poll</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Election Results</h1>
+    <div class="candidates-container">
+        {% if candidates %}
+            {% for id, name in candidates %}
+                <div class="candidate">
+                    <h2>{{ name }}</h2>
+                    <form action="/vote" method="post">
+                        <input type="hidden" name="candidate_id" value="{{ id }}">
+                        <input type="hidden" name="voter_name" value="{{ voter_name }}">
+                        <input type="hidden" name="voter_email" value="{{ voter_email }}">
+                        <button class="vote-button" type="submit">Vote</button>
+                    </form>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No candidates found.</p>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
