@@ -18,7 +18,7 @@ mycursor = mydb.cursor()
 # Define the email sending function
 def send_email(to_email, voter_name):
     from_email = "praneshpranesh648@gmail.com"
-    password = "qoaa vssn sxoo rptq"
+    password = ""
 
     subject = "Thanks for Voting"
     body = f"Dear {voter_name},\n\nThank you for voting!\n\nBest regards,\nElection Committee"
