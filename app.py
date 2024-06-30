@@ -8,8 +8,8 @@ app = Flask(__name__)
 mydb = mysql.connector.connect(
     host = "localhost",
     user = "root",
-    password = "Pr@24!74",
-    database = "election_count"
+    password = "Pr!74",
+    database = "elnt"
     
 )
 mycursor = mydb.cursor()
@@ -18,7 +18,7 @@ mycursor = mydb.cursor()
 
 def send_mail(to_mail,voter_name):
     from_email="praneshpranesh648@gmail.com"
-    password = "qoaa vssn sxoo rptq"
+    password = "q"
 
     subject = "Thanks For Voting"
     body = f"Dear {voter_name},\n\n Thanks you for Voting!\n\n Best Regards,\nElection Committee"
