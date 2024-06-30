@@ -9,7 +9,7 @@ app = Flask(__name__)
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Pr@24!74",
+    password="P74",
     database="election_count"
 )
 
