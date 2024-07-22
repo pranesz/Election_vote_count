@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
 mydb = mysql.connector.connect(
-    host = "localhost",
+    host = "localhost", 
     user = "root",
     password = "Yourpass",
     database = "YourDb"
